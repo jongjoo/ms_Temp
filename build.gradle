@@ -1,0 +1,32 @@
+plugins {
+    id 'org.springframework.boot' version '2.0.8.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+    id 'java'
+}
+
+group 'org.msmall'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    maven { url 'https://repo.spring.io/milestone' }
+    maven { url 'https://repo.spring.io/snapshot' }
+}
+
+ext {
+    set('springCloudVersion', "Greenwich.BUILD-SNAPSHOT")
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    compile group: 'org.hibernate', name: 'hibernate-entitymanager', version: '5.2.2.Final'
+    compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.6'
+
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+
+}
