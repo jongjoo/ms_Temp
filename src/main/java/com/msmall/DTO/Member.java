@@ -1,12 +1,12 @@
-package com.msmall.DTO;
+package com.msmall.dto;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import lombok.Data;
+
+import javax.persistence.*;
 
 @Entity
 @Table(name="MEMBER")
+@Data
 public class Member {
 
     @Id
