@@ -45,7 +45,10 @@ public class TestController {
 
         //등록
 
+//        EntityTransaction tx = entityManager.getTransaction();
+//        tx.begin();
         entityManager.persist(member);
+//        tx.commit();
 
         //수정
 //        member.setAge(20);
